@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Zilla Slab", serif;
+  font-weight: 400;
+  line-height: 1.7;
+  box-sizing: border-box; }
+
+.main-heading {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 6rem;
+  transform: skewX(12deg) skewY(4deg);
+  position: absolute;
+  top: 5rem;
+  left: 9rem;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #f10c0c, #941a1a); }
+  .main-heading__top {
+    left: 7rem;
+    display: block; }
+  .main-heading__bottom {
+    display: block; }
+
+.row {
+  max-width: 100%;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 3rem; }
+  .row [class^="col-"] {
+    height: 100%;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 2rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row .col-left {
+    width: calc((100% - 2 * 2rem) / 3); }
+  .row .col-right {
+    width: calc(2 * ((100% - 2 * 2rem) / 3)); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 2rem) / 3); }
+
+.icon-background {
+  border: 1px solid #941a1a;
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  top: 50%;
+  margin-top: 50vh;
+  display: block;
+  margin-left: 6rem;
+  border-radius: 3px; }
+  .icon-background .icon {
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 12rem;
+    width: 12rem;
+    border-radius: 3px;
+    clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+    background-image: linear-gradient(to right, #f10c0c, #941a1a); }
+  .icon-background .icon-2 {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    color: white;
+    background-color: #941a1a; }
+    .icon-background .icon-2__text {
+      font-size: 2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
+.image-function {
+  width: 20rem;
+  height: 4rem;
+  border: 1px solid #f10c0c;
+  position: relative; }
+  .image-function .add-image-function {
+    color: #f10c0c;
+    position: absolute;
+    font-size: 3rem;
+    left: 4%; }
+  .image-function .watch-now:link, .image-function .watch-now:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .7rem 2rem;
+    background-color: #f10c0c;
+    color: #fcee2c;
+    position: absolute;
+    text-align: center;
+    top: 5%;
+    right: 2%;
+    border-radius: 4px;
+    width: 70%; }
+
+.watchlist-popup {
+  width: 30%;
+  height: 50vh;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 3rem;
+  z-index: 1000;
+  overflow: scroll;
+  transition: all 0.2s;
+  display: none; }
+  .watchlist-popup__cancel {
+    position: absolute; }
+    .watchlist-popup__cancel:visited, .watchlist-popup__cancel:link {
+      text-decoration: none;
+      font-size: 4rem;
+      right: 2%;
+      top: 1%;
+      color: #941a1a;
+      line-height: 0.6; }
+  .watchlist-popup__expand {
+    position: absolute;
+    font-size: 1.5rem;
+    left: 2rem;
+    top: 2%;
+    color: #941a1a;
+    cursor: pointer;
+    display: block; }
+  .watchlist-popup__shrink {
+    position: absolute;
+    font-size: 1.5rem;
+    left: 2rem;
+    top: 2%;
+    color: #941a1a;
+    cursor: pointer;
+    display: none; }
+  .watchlist-popup ul {
+    position: relative;
+    padding: 4rem 3rem;
+    margin: 2rem auto;
+    width: 100%; }
+  .watchlist-popup__list {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    height: 5rem;
+    border-radius: 4px;
+    display: block;
+    padding: 1rem 2rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.801);
+    margin-bottom: 1rem; }
+  .watchlist-popup__images {
+    position: absolute;
+    margin: auto 0;
+    top: 0.5rem;
+    left: 2rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: inline-block; }
+  .watchlist-popup__description {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #941a1a;
+    left: 25%; }
+  .watchlist-popup__play-icon {
+    text-decoration: none;
+    position: absolute;
+    right: 15%;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3px;
+    clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+    background-image: linear-gradient(to right, #f10c0c, #941a1a); }
+
+.watchlist-remove:visited, .watchlist-remove:link {
+  position: absolute;
+  text-decoration: none;
+  color: #941a1a;
+  right: 2%;
+  font-size: 8rem;
+  top: 0;
+  line-height: 0.5;
+  margin: auto 0; }
+
+.app {
+  margin: 2rem;
+  height: 100vh;
+  background-color: #fcee2c;
+  padding: 1rem 2rem; }
+  .app__image {
+    width: 20rem;
+    height: 25rem; }
